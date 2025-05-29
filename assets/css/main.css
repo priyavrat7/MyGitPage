@@ -44,6 +44,28 @@
   --surface-color: #343434;
 }
 
+.social-icons a i {
+  color: white;
+}
+
+
+/* Base class for all custom icons for Techamana */
+.custom {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+/* Custom Techamana icon */
+.custom-techamana {
+  background-image: url('/assets/img/techamana.png');
+}
+
+
 .dark-background {
   --background-color: rgba(15, 15, 15, 0.975);
   --default-color: #ffffff;
