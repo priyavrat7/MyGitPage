@@ -64,7 +64,9 @@
 
 /* Custom Techamana icon */
 .custom-techamana {
-  background-image: url('/assets/img/techamana.png');
+  background: currentColor;
+  -webkit-mask: url('../img/techamana.svg') no-repeat center / contain;
+  mask: url('../img/techamana.svg') no-repeat center / contain;
 }
 
 
@@ -769,6 +771,12 @@ section,
 
 .hero .social-links a:hover {
   background-color: var(--accent-color);
+}
+
+/* Techamana icon in hero social links */
+.hero .social-links a .custom-techamana {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 768px) {
