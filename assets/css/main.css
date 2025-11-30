@@ -65,8 +65,8 @@
 /* Custom Techamana icon */
 .custom-techamana {
   background: currentColor;
-  -webkit-mask: url('../img/techamana.svg') no-repeat center / contain;
-  mask: url('../img/techamana.svg') no-repeat center / contain;
+  -webkit-mask: url('../img/techamana.svg') center / contain no-repeat;
+  mask: url('../img/techamana.svg') center / contain no-repeat;
 }
 
 
