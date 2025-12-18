@@ -775,7 +775,7 @@ section,
 }
 
 .hero .social-links {
-  margin-top: 25px;
+  margin-top: 34px;
 }
 
 .hero .social-links a {
@@ -793,6 +793,7 @@ section,
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   backdrop-filter: saturate(120%) blur(2px);
+  
 }
 
 .hero .social-links a:hover {
@@ -829,11 +830,23 @@ section,
   outline-offset: 2px;
 }
 
-/* Techamana icon in hero social links */
+/* Normalize icon sizes and alignment inside social buttons */
+.hero .social-links a i {
+  font-size: 19px;
+  line-height: 1;
+  transform: translateY(0.5px);
+}
+.hero .social-links a .custom-techamana {
+  width: 19px;
+  height: 19px;
+  transform: translateY(0px);
+}
+
+/* Techamana icon in hero social links
 .hero .social-links a .custom-techamana {
   width: 20px;
   height: 20px;
-}
+} */
 
 @media (max-width: 768px) {
   .hero h2 {
