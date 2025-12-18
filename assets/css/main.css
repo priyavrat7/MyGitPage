@@ -506,14 +506,37 @@ h6 {
   margin: 0 4px;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .footer .social-links a:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.35);
   text-decoration: none;
+}
+
+/* Brand-specific backgrounds for better visibility (Footer) */
+.footer .social-links a[href^="mailto:"] {
+  background-color: #D44638;
+}
+.footer .social-links a[href*="linkedin.com"] {
+  background-color: #0A66C2;
+}
+.footer .social-links a[href*="facebook.com"] {
+  background-color: #1877F2;
+}
+.footer .social-links a[href*="instagram.com"] {
+  background: linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+.footer .social-links a[href*="github.com"] {
+  background-color: #24292e;
+}
+.footer .social-links a[href*="techamana.com"] {
+  background-color: #22c55e;
 }
 
 .footer .copyright {
@@ -756,21 +779,54 @@ section,
 }
 
 .hero .social-links a {
-  background-color: color-mix(in srgb, var(--default-color), transparent 90%);
-  color: var(--default-color);
-  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-size: 16px;
   width: 40px;
   height: 40px;
-  border-radius: 50px;
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
-  transition: 0.3s;
+  margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  backdrop-filter: saturate(120%) blur(2px);
 }
 
 .hero .social-links a:hover {
   background-color: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* Brand-specific backgrounds for better visibility (Hero) */
+.hero .social-links a[href^="mailto:"] {
+  background-color: #D44638; /* Gmail red */
+}
+.hero .social-links a[href*="linkedin.com"] {
+  background-color: #0A66C2;
+}
+.hero .social-links a[href*="facebook.com"] {
+  background-color: #1877F2;
+}
+.hero .social-links a[href*="instagram.com"] {
+  background: linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+.hero .social-links a[href*="github.com"] {
+  background-color: #24292e;
+}
+.hero .social-links a[href*="techamana.com"] {
+  background-color: #22c55e; /* green */
+}
+
+/* Focus styles for accessibility */
+.hero .social-links a:focus-visible,
+.footer .social-links a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* Techamana icon in hero social links */
