@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-    .isotope-container {
-      justify-content: flex-start !important;
-    }
-  </style>
-</head>
-<head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Priyavrat Sharma's Projects</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="Projects by Priyavrat Dev Sharma across Java, distributed systems, machine learning, IoT, Android, and embedded software.">
+  <meta name="keywords" content="Priyavrat Sharma projects, JavaFX, Spring Boot, Paxos, Distributed Systems, IoT, Machine Learning">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://priyavrat7.github.io/MyGitPage/projects.html">
+  <meta property="og:title" content="Projects - Priyavrat Dev Sharma">
+  <meta property="og:description" content="Engineering projects across Java, distributed systems, AI/ML, IoT, and embedded systems.">
+  <meta property="og:image" content="https://priyavrat7.github.io/MyGitPage/assets/img/priv6.jpg">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="assets/img/apple-touch-icon.png?v=3">
@@ -58,28 +58,11 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <!-- <li><a href="resume.html">Resume</a></li> -->
+          <li><a href="resume.html">Resume</a></li>
           <!-- <li><a href="https://drive.google.com/file/d/130IFwngoIoxszVAMadKEHNizyjkz2vj6/view?usp=sharing">Resume</a></li> -->
           
           <li><a href="academics.html">Academics</a></li>
           <li><a href="projects.html" class="active">Projects</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -97,7 +80,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Projects</h1>
-              <p class="mb-0"></p>
+              <p class="mb-0">Selected engineering projects across backend systems, distributed coordination, AI/ML, Android IoT, embedded firmware, and research software.</p>
             </div>
           </div>
         </div>
@@ -120,120 +103,141 @@
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
           <ul class="projects-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <!-- <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li> -->
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-java">Java</li>
+            <li data-filter=".filter-ml">AI/ML</li>
+            <li data-filter=".filter-iot">IoT</li>
+            <li data-filter=".filter-distributed">Distributed</li>
+            <li data-filter=".filter-research">Research</li>
           </ul><!-- End projects Filters -->
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
             <!-- Java priority -->
 
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-java filter-ml filter-iot">
+              <div class="projects-content h-100">
+                <a href="https://github.com/priyavrat7/AI-at-the-Edge-of-Innovation" title="AI Medical App">
+                  <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid" alt="AI Medical App">
+                </a>
+                <div class="projects-info">
+                  <h4>AI Medical App (Java, Python)</h4>
+                  <p>Pediatric IoT healthcare platform with BLE sensors, Firebase backend, vector embeddings, and RAG-style symptom retrieval.</p>
+                  <a href="https://github.com/priyavrat7/AI-at-the-Edge-of-Innovation" title="GitHub Repo" class="details-link"><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-ml filter-distributed">
               <div class="projects-content h-100">
                 <a href="https://drive.google.com/file/d/1lcxF8zvqScYmoDoQpDYgdB_QtVv8njWE/view?usp=sharing" title="Distributed Machine Learning">
                   <img src="assets/img/portfolio/Ericsson-DiML.webp" class="img-fluid" alt="Distributed Machine Learning">
                 </a>
                 <div class="projects-info">
                   <h4>Distributed Machine Learning (Python)</h4>
+                  <p>PyTorch DDP, Gloo/NCCL, Django orchestration, hardware telemetry, Kafka/Redis streaming, and edge deployment work.</p>
                   <a href="https://drive.google.com/file/d/1lcxF8zvqScYmoDoQpDYgdB_QtVv8njWE/view?usp=sharing" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-research filter-iot">
               <div class="projects-content h-100">
                 <a href="https://escholarship.mcgill.ca/concern/theses/zp38wk35v?locale=en" title="Optimizing collaborative UAV networks for data efficiency in IoT">
                   <img src="assets/img/portfolio/MyThesis.webp" class="img-fluid" alt="Optimizing collaborative UAV networks for data efficiency in IoT ">
                 </a>
                 <div class="projects-info">
                   <h4>Optimizing collaborative UAV networks using C++ for data efficiency in IoT (Thesis) </h4>
+                  <p>Graph optimization and collaborative routing research for efficient IoT data exchange across UAV networks.</p>
                   <a href="https://escholarship.mcgill.ca/concern/theses/zp38wk35v?locale=en" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-java">
               <div class="projects-content h-100">
                 <a href="https://github.com/priyavrat7/Stock-Portfolio-Manager" title="Stock Portfolio Manager">
                   <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="Stock Portfolio Manager">
                 </a>
                 <div class="projects-info">
                   <h4>Stock Portfolio Manager (JavaFx)</h4>
+                  <p>Desktop trading platform with JavaFX MVC, PostgreSQL/JDBC, Docker, live market data, and non-blocking UI operations.</p>
                   <a href="https://github.com/priyavrat7/Stock-Portfolio-Manager" title="GitHub Repo" class="details-link"><i class="bi bi-github"></i></a>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-java filter-iot">
               <div class="projects-content h-100">
                 <a href="https://github.com/priyavrat7/Health-Monitoring-System" title="Health Monitoring System">
                   <img src="assets/img/portfolio/portfolio-3.webp" class="img-fluid" alt="Health Monitoring System">
                 </a>
                 <div class="projects-info">
                   <h4>Health Monitoring System (Android Java)</h4>
+                  <p>Android IoT app with BLE sensors, Firebase Firestore, real-time health streaming, and role-based access.</p>
                   <a href="https://github.com/priyavrat7/Health-Monitoring-System" title="GitHub Repo" class="details-link"><i class="bi bi-github"></i></a>
                 </div>
               </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-java filter-distributed">
               <div class="projects-content h-100">
                 <a href="https://github.com/priyavrat7/Paxos_Distributed_Orders" title="Paxos Distributed Orders">
                   <img src="assets/img/portfolio/portfolio-9.webp" class="img-fluid" alt="Paxos Distributed Orders">
                 </a>
                 <div class="projects-info">
                   <h4>Paxos Distributed Orders (Java)</h4>
+                  <p>Total-order broadcast with majority fault tolerance, failure injection hooks, and JUnit correctness tests.</p>
                   <a href="https://github.com/priyavrat7/Paxos_Distributed_Orders" title="GitHub Repo" class="details-link"><i class="bi bi-github"></i></a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-java filter-distributed">
               <div class="projects-content h-100">
                 <a href="https://github.com/priyavrat7/Distributed-Task-Execution-Framework" title="Distributed Task Execution Framework">
                   <img src="assets/img/portfolio/portfolio-10.webp" class="img-fluid" alt="Distributed Task Execution Framework">
                 </a>
                 <div class="projects-info">
                   <h4>Distributed Task Execution Framework (Java)</h4>
+                  <p>Master-worker execution system with Apache ZooKeeper coordination, ZNode watchers, callbacks, and load balancing.</p>
                   <a href="https://github.com/priyavrat7/Distributed-Task-Execution-Framework" title="GitHub Repo" class="details-link"><i class="bi bi-github"></i></a>
                 </div>
               </div>
             </div>
 
             <!-- Machine Learning -->
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-ml">
               <div class="projects-content h-100">
                 <a href="https://drive.google.com/drive/folders/1abTDWd95vEQk2uxIYwvzcd2hAf6jxuGj?usp=drive_link" title="Sub-Reddit Text Classification">
                   <img src="assets/img/portfolio/portfolio-12.webp" class="img-fluid" alt="">
                 </a>
                 <div class="projects-info">
                   <h4>Sub-Reddit Text Classification using Advanced Machine Learning Techniques (Python)</h4>
+                  <p>Text classification pipeline with preprocessing, feature engineering, model comparison, and performance analysis.</p>
                   <a href="https://drive.google.com/drive/folders/1abTDWd95vEQk2uxIYwvzcd2hAf6jxuGj?usp=drive_link" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div> 
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-product">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-ml">
               <div class="projects-content h-100">
                 <a href="https://drive.google.com/drive/folders/1V7JH0fFr7mXyQ8Du51c3-GebBJ5Xf6Ba?usp=drive_link" title="Image Classification of Japanese Numerals">
                   <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="">
                 </a>
                 <div class="projects-info">
                   <h4>Image Classification of Japanese Numerals with Deep Convolutional Neural Network (CNN) Models (Python)</h4>
-                  <!-- <p>To Update</p> -->
-                  <!-- <a href="assets/img/projects/projects-10.webp" title="Project" data-gallery="projects-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                  <p>PyTorch image classification work exploring CNN architectures, data loaders, training loops, and validation metrics.</p>
                   <a href="https://drive.google.com/drive/folders/1V7JH0fFr7mXyQ8Du51c3-GebBJ5Xf6Ba?usp=drive_link" 
                   title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-ml">
               <div class="projects-content h-100">
                 <a href="https://github.com/priyavrat7/AI-SaaS-Prototype" title="AI SaaS Prototype">
                   <img src="assets/img/portfolio/portfolio-4.webp" class="img-fluid" alt="AI SaaS Prototype">
                 </a>
                 <div class="projects-info">
                   <h4>AI SaaS Prototype (Python)</h4>
+                  <p>Full-stack AI SaaS prototype with React, TypeScript, Next.js, FastAPI, SQLModel, LangChain, and OpenAI APIs.</p>
                   <a href="https://github.com/priyavrat7/AI-SaaS-Prototype" title="GitHub Repo" class="details-link"><i class="bi bi-github"></i></a>
                 </div>
               </div>
@@ -241,25 +245,27 @@
 
             
 
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-iot">
               <div class="projects-content h-100">
                 <a href="https://github.com/priyavrat7/IoT-Firmware-for-Health-Monitoring-System" title="IoT Firmware for Health Monitoring System">
                   <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid" alt="IoT Firmware for Health Monitoring System">
                 </a>
                 <div class="projects-info">
                   <h4>IoT Firmware for Health Monitoring System (C)</h4>
+                  <p>ESP32 embedded firmware with BLE data transmission, low-power optimization, and reliable sensor connectivity.</p>
                   <a href="https://github.com/priyavrat7/IoT-Firmware-for-Health-Monitoring-System" title="GitHub Repo" class="details-link"><i class="bi bi-github"></i></a>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-java">
               <div class="projects-content h-100">
                 <a href="https://github.com/priyavrat7/Android-Step-Tracker" title="Android Step Tracker">
                   <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="Android Step Tracker">
                 </a>
                 <div class="projects-info">
                   <h4>Android Step Tracker</h4>
+                  <p>Java Android activity tracker using device sensors, background services, and local history storage.</p>
                   <a href="https://github.com/priyavrat7/Android-Step-Tracker" title="GitHub Repo" class="details-link"><i class="bi bi-github"></i></a>
                 </div>
               </div>
@@ -270,15 +276,14 @@
             <div class="w-100"></div>
 
             <!-- Everything else -->
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-books">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-iot">
               <div class="projects-content h-100">
                 <a href="https://drive.google.com/file/d/1_Y-y6IBMGT3Z8SSLrlK3kuMb6KA4AIOk/view" title="Connected Configurable Smart Home (CCSH)">
                   <img src="assets/img/portfolio/projects-4.webp" class="img-fluid" alt="">
                 </a>
                 <div class="projects-info">
                   <h4>Connected Configurable Smart Home (CCSH) (IoT)</h4>
-                  <!-- <p>To Update</p> -->
-                  <!-- <a href="assets/img/projects/projects-4.webp" title="Project" data-gallery="projects-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                  <p>Protocol-agnostic smart-home backend with HTTP/MQTT support, registration/discovery, and AWS DynamoDB/S3 integration.</p>
                   <a href="https://drive.google.com/file/d/1_Y-y6IBMGT3Z8SSLrlK3kuMb6KA4AIOk/view" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
@@ -287,52 +292,20 @@
             
              
 
-            <!--
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-books">
-              <div class="projects-content h-100">
-                <img src="assets/img/projects/projects-4.webp" class="img-fluid" alt="">
-                <div class="projects-info">
-                  <h4>Implemention of MQTT-based Publisher-Subscriber System using Arduino and Raspberry Pi as MQTT Broker</h4>
-                
-                  <a href="" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div>
-            -->
-
-            
-
-            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-books">
+            <div class="col-lg-4 col-md-6 projects-item isotope-item filter-iot">
               <div class="projects-content h-100">
                 <a href="https://docs.google.com/document/d/1Jg0epRyOwEY5ENbjVMLr1eUgP8AfBYg-/edit?usp=sharing&ouid=101933365152343376365&rtpof=true&sd=true" title="Real-Time Protection Circuit for Induction Motors">
                   <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid" alt="">
                 </a>
                 <div class="projects-info">
                   <h4>Real-Time Protection Circuit for Induction Motors against Single Phasing using Embedded Control (Embedded C)</h4>
+                  <p>Embedded control project for real-time motor protection, fault detection, and hardware validation.</p>
                 
                   <a href="https://docs.google.com/document/d/1Jg0epRyOwEY5ENbjVMLr1eUgP8AfBYg-/edit?usp=sharing&ouid=101933365152343376365&rtpof=true&sd=true" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div> 
 
-            
-            
-
-
-
-            <!-- <div class="col-lg-4 col-md-6 projects-item isotope-item filter-app">
-              <div class="projects-content h-100">
-                <img src="assets/img/portfolio/portfolio-1.webp" class="img-fluid" alt="MyCodes">
-                <div class="projects-info">
-                  <h4>MyCodes</h4>
-                  <a href="https://github.com/priyavrat7/MyCodes" title="GitHub Repo" class="details-link"><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-            </div> -->
-            
-            
-            
-            
           </div><!-- End projects Container -->
 
         </div>
@@ -348,11 +321,10 @@
       <h3 class="sitename">Priyavrat Sharma</h3>
       <p>Stay curious, keep learning, and build something great!</p>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:priyavrat.sharma@mail.mcgill.ca" aria-label="Email"><i class="bi bi-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/priyavrat-sharma-537b6113a/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/priyavrat7" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://techamana.com/talent/priyavrat-sharma" target="_blank" rel="noopener noreferrer" aria-label="Techamana profile"><i class="custom custom-techamana"></i></a>
       </div>
       <div class="container">
         <div class="copyright text-center">
