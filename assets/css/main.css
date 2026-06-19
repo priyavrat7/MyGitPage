@@ -2060,3 +2060,40 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+@media (max-width: 768px) {
+
+  .hero {
+    overflow: hidden;
+  }
+
+  .hero-photo {
+    position: absolute;
+    right: -80px;
+    bottom: 0;
+    height: 55vh;
+    z-index: 1;
+    opacity: 0.22;
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+  }
+
+  .hero-photo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    transform: scale(1);
+    transform-origin: bottom center;
+    filter:
+      grayscale(10%)
+      drop-shadow(0 20px 40px rgba(0,0,0,.5));
+  }
+
+  .hero-profile {
+    position: relative;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(4px);
+  }
+}
