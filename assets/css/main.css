@@ -2059,15 +2059,11 @@ section,
 
 @media (max-width: 768px) {
 
-  .hero::before {
-    display: none;
-  }
-
   .hero-photo {
     position: absolute;
-    right: -20px;
-    bottom: 0;
-    height: 70vh;
+    right: -5px;      /* move image slightly toward center */
+    bottom: 100px;     /* raise image */
+    height: 62vh;     /* slightly smaller */
     z-index: 2;
     opacity: 1;
     display: flex;
@@ -2079,8 +2075,10 @@ section,
     height: 100%;
     width: auto;
     object-fit: contain;
-    transform: scale(1.25);
+
+    transform: scale(1.15); /* slightly smaller than 1.25 */
     transform-origin: bottom center;
+
     filter: none;
   }
 
