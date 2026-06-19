@@ -763,10 +763,10 @@ section,
   top: 0;
   width: 65%;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.48) 66%, rgba(0, 0, 0, 0) 100%),
-    radial-gradient(circle at 28% 46%, rgba(24, 210, 110, 0.1), transparent 38%);
+    linear-gradient(90deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.15) 66%, rgba(0, 0, 0, 0) 100%),
+    radial-gradient(circle at 28% 46%, rgba(24, 210, 110, 0.05), transparent 38%);
   pointer-events: none;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero .container {
@@ -2059,13 +2059,17 @@ section,
 
 @media (max-width: 768px) {
 
+  .hero::before {
+    display: none;
+  }
+
   .hero-photo {
     position: absolute;
     right: -20px;
     bottom: 0;
     height: 70vh;
     z-index: 2;
-    opacity: 0.45;
+    opacity: 1;
     display: flex;
     align-items: flex-end;
     pointer-events: none;
@@ -2077,13 +2081,13 @@ section,
     object-fit: contain;
     transform: scale(1.25);
     transform-origin: bottom center;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,.4));
+    filter: none;
   }
 
   .hero-profile {
     position: relative;
-    z-index: 3;
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(4px);
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: none;
   }
 }
