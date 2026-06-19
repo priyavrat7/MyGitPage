@@ -761,7 +761,7 @@ section,
   bottom: 0;
   left: 0;
   top: 0;
-  width: 52%;
+  width: 65%;
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.48) 66%, rgba(0, 0, 0, 0) 100%),
     radial-gradient(circle at 28% 46%, rgba(24, 210, 110, 0.1), transparent 38%);
@@ -778,6 +778,31 @@ section,
   align-items: center;
   display: flex;
   justify-content: flex-start;
+}
+
+.hero-photo {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  z-index: 2;
+  height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.hero-photo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 25px 60px rgba(0,0,0,.55))
+    drop-shadow(0 10px 20px rgba(0,0,0,.45));
+}
+
+.hero-profile {
+  position: relative;
+  z-index: 5;
 }
 
 .hero-profile {
@@ -968,6 +993,14 @@ section,
 
   .hero-profile {
     max-width: 500px;
+  }
+
+  .hero-photo {
+    display: none;
+  }
+
+  .hero::before {
+    width: 100%;
   }
 }
 
