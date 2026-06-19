@@ -997,10 +997,6 @@ section,
     max-width: 500px;
   }
 
-  .hero-photo {
-    display: none;
-  }
-
   .hero::before {
     width: 100%;
   }
@@ -2069,11 +2065,11 @@ section,
 
   .hero-photo {
     position: absolute;
-    right: -80px;
+    right: -40px;
     bottom: 0;
-    height: 55vh;
+    height: 60vh;
     z-index: 1;
-    opacity: 0.22;
+    opacity: 0.18;
     display: flex;
     align-items: flex-end;
     pointer-events: none;
@@ -2083,7 +2079,7 @@ section,
     height: 100%;
     width: auto;
     object-fit: contain;
-    transform: scale(1);
+    transform: scale(1.1);
     transform-origin: bottom center;
     filter:
       grayscale(10%)
