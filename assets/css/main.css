@@ -2061,8 +2061,8 @@ section,
 
   .hero-photo {
     position: absolute;
-    right: -5px;      /* move image slightly toward center */
-    bottom: 100px;     /* raise image */
+    right: 1px;      /* move image slightly toward center */
+    bottom: 124px;     /* raise image */
     height: 62vh;     /* slightly smaller */
     z-index: 2;
     opacity: 1;
