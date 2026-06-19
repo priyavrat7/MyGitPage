@@ -782,8 +782,8 @@ section,
 
 .hero-photo {
   position: absolute;
-  right: 5%;
-  bottom: 0;
+  right: 3%;
+  bottom: 0px;
   z-index: 2;
   height: 92vh;
   display: flex;
@@ -795,6 +795,8 @@ section,
   height: 100%;
   width: auto;
   object-fit: contain;
+  transform: scale(1.42);
+  transform-origin: bottom center;
   filter:
     drop-shadow(0 25px 60px rgba(0,0,0,.55))
     drop-shadow(0 10px 20px rgba(0,0,0,.45));
