@@ -916,6 +916,9 @@ section,
 .hero .social-links {
   margin-top: 26px;
   padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .hero .social-links a {
@@ -928,7 +931,7 @@ section,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
+  margin-right: 0;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
@@ -1044,6 +1047,10 @@ section,
     align-items: stretch;
     flex-direction: column;
     max-width: 260px;
+  }
+
+  .hero .social-links {
+    justify-content: center;
   }
 }
 
@@ -1915,10 +1922,6 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
-
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
