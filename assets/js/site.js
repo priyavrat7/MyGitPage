@@ -78,6 +78,37 @@
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
 
+
+  /* Live open-source stats (data/opensource.json, refreshed daily by a GitHub Action).
+     The pages ship with static values, so nothing breaks if this fetch fails. */
+  (function () {
+    var targets = document.querySelectorAll('[data-stat], [data-pr], [data-updated]');
+    if (!targets.length || !window.fetch) return;
+    var fr = root.lang === 'fr';
+    var labels = fr ? { merged: 'Fusionnée', open: 'Ouverte', closed: 'Fermée' }
+                    : { merged: 'Merged', open: 'Open', closed: 'Closed' };
+    fetch((fr ? '../' : '') + 'data/opensource.json', { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (d) {
+        document.querySelectorAll('[data-stat]').forEach(function (el) {
+          var v = d.totals && d.totals[el.getAttribute('data-stat')];
+          if (typeof v === 'number') el.textContent = v;
+        });
+        document.querySelectorAll('[data-pr]').forEach(function (el) {
+          var st = d.prs && d.prs[el.getAttribute('data-pr')];
+          if (!st || !labels[st]) return;
+          el.className = 'pill ' + st;
+          el.textContent = labels[st];
+        });
+        document.querySelectorAll('[data-updated]').forEach(function (el) {
+          if (!d.updated) return;
+          var dt = new Date(d.updated + 'T12:00:00');
+          el.textContent = dt.toLocaleDateString(fr ? 'fr-CA' : 'en-CA', { day: 'numeric', month: 'long', year: 'numeric' });
+        });
+      })
+      .catch(function () { /* keep the static values */ });
+  })();
+
   /* Print resume */
   var printBtn = document.getElementById('print-resume');
   if (printBtn) printBtn.addEventListener('click', function () { window.print(); });

@@ -1,0 +1,23 @@
+
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Priyavrat Dev Sharma",
+    "jobTitle": "Research Software Developer",
+    "worksFor": { "@type": "Organization", "name": "McGill Centre for Integrative Neuroscience (MCIN)" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "McGill University" },
+      { "@type": "CollegeOrUniversity", "name": "Birla Institute of Technology and Science, Pilani" },
+      { "@type": "CollegeOrUniversity", "name": "Birla Institute of Technology Mesra" }
+    ],
+    "address": { "@type": "PostalAddress", "addressCountry": "CA" },
+    "email": "mailto:priyavrat.sharma@mail.mcgill.ca",
+    "url": "https://priyavrat7.github.io/MyGitPage/",
+    "image": "https://priyavrat7.github.io/MyGitPage/assets/img/priv6.jpg",
+    "sameAs": [
+      "https://github.com/priyavrat7",
+      "https://www.linkedin.com/in/priyavrat-sharma-537b6113a/",
+      "https://techamana.com/talent/priyavrat-sharma"
+    ]
+  }
+  

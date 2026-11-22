@@ -1,0 +1,261 @@
+title: Open Source | Priyavrat Dev Sharma
+description: Open-source contributions by Priyavrat Dev Sharma: two credited LORIS security advisories, security-fix backports, Cisco genielibs, Meraki Dashboard API SDK, k8s-objectmatcher, HarmoniCA, and LORIS release QA.
+keywords: Priyavrat Sharma open source, LORIS security advisory, GHSA, Cisco genielibs, pyATS, Meraki Dashboard API, k8s-objectmatcher, HarmoniCA, release QA, pull requests
+image: priv6.jpg
+---
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="crumbs"><a href="index.html">Home</a><span>/</span><span>Open Source</span></div>
+        <span class="eyebrow"><i class="bi bi-git"></i> Open source</span>
+        <h1>Open-source contributions</h1>
+        <p class="lead">Security research, bug fixes, features and release QA in public projects: the LORIS neuroscience platform, Cisco and Meraki network tooling, and HarmoniCA. Every pull request below links to the public record.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://github.com/priyavrat7" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub profile</a>
+          <a class="btn" href="https://github.com/search?q=author%3Apriyavrat7+is%3Apr&amp;type=pullrequests" target="_blank" rel="noopener noreferrer"><i class="bi bi-search"></i> All my pull requests</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="wrap">
+        <div class="stats s5 reveal">
+          <div class="stat"><b><span class="grad" data-stat="prs">83</span></b><span>Pull requests authored</span></div>
+          <div class="stat"><b><span class="grad" data-stat="merged">53</span></b><span>Merged (<span data-stat="merge_rate">93</span>% of decided PRs)</span></div>
+          <div class="stat"><b><span class="grad" data-stat="issues">32</span></b><span>Issues filed</span></div>
+          <div class="stat"><b><span class="grad">2</span></b><span>Credited security advisories</span></div>
+          <div class="stat"><b><span class="grad">170+</span></b><span>Review comments and discussion posts</span></div>
+        </div>
+        <p class="note">Counts as of <span data-updated>21 November 2026</span>.</p>
+      </div>
+    </section>
+
+    <!-- ADVISORIES -->
+    <section class="section" id="security">
+      <div class="wrap">
+        <div class="section-head reveal"><div><h2>Security advisories</h2><p>Found through RBAC and session-handling threat modeling of LORIS. I am the credited reporter on both. Published 13 November 2026.</p></div></div>
+        <div class="grid g2">
+          <article class="card reveal">
+            <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="pill pub">Moderate · CVSS 5.4</span><span class="pill closed">CWE-862</span></div>
+            <h3 class="mt-2">Authorization bypass in <code>user_accounts</code></h3>
+            <p>A user with only "User Accounts: Create/Edit/View — Own Sites" could read and modify user accounts outside their site and project scope by navigating directly to the edit URL. Scope was enforced in the listing view but not on the direct edit endpoint or its save operation.</p>
+            <ul class="info-list mt-2 small">
+              <li><i class="bi bi-bug"></i><div><strong>Affected</strong>LORIS 24.0.0 to 28.0.1</div></li>
+              <li><i class="bi bi-check2-circle"></i><div><strong>Patched</strong>27.0.4 and 28.0.2 · my backport to 26.0: <a href="https://github.com/aces/Loris/pull/11310" target="_blank" rel="noopener noreferrer">#11310</a></div></li>
+            </ul>
+            <div class="card-foot"><a class="link" href="https://github.com/aces/Loris/security/advisories/GHSA-f488-7r46-r42v" target="_blank" rel="noopener noreferrer">GHSA-f488-7r46-r42v <i class="bi bi-box-arrow-up-right"></i></a></div>
+          </article>
+          <article class="card reveal">
+            <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="pill pub">Moderate · CVSS 4.3</span><span class="pill closed">CWE-639 · IDOR</span></div>
+            <h3 class="mt-2">Authorization bypass through user-controlled key in <code>timepoint_list</code></h3>
+            <p>An authenticated user without access to the Candidate module could reach instrument-list pages by supplying candidate identifiers in the URL, which allowed enumeration of candidate records and exposed candidate metadata.</p>
+            <ul class="info-list mt-2 small">
+              <li><i class="bi bi-bug"></i><div><strong>Affected</strong>LORIS 23.0.0 to 28.0.1</div></li>
+              <li><i class="bi bi-check2-circle"></i><div><strong>Patched</strong>27.0.4 and 28.0.2 · my backport to 26.0: <a href="https://github.com/aces/Loris/pull/11311" target="_blank" rel="noopener noreferrer">#11311</a></div></li>
+            </ul>
+            <div class="card-foot"><a class="link" href="https://github.com/aces/Loris/security/advisories/GHSA-3vv3-x7q8-46vr" target="_blank" rel="noopener noreferrer">GHSA-3vv3-x7q8-46vr <i class="bi bi-box-arrow-up-right"></i></a></div>
+          </article>
+        </div>
+
+        <details class="more-box reveal">
+          <summary>Security-fix backports to LORIS release branches <span>12 merged · 15 open</span></summary>
+          <div class="box-body">
+            <p class="muted small" style="margin-bottom:14px">I authored these backports of security fixes to older supported release branches. Apart from the two advisories above, the advisories were reported by others.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>PR</th><th>Module / fix</th><th>Advisory</th><th>Branch</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11311" target="_blank" rel="noopener noreferrer">#11311</a></td><td>timepoint_list authorization bypass</td><td>GHSA-3vv3-x7q8-46vr</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11311">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11310" target="_blank" rel="noopener noreferrer">#11310</a></td><td>user_accounts authorization bypass</td><td>GHSA-f488-7r46-r42v</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11310">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11309" target="_blank" rel="noopener noreferrer">#11309</a></td><td>bvl_feedback</td><td>GHSA-9h4g-m8c4-x84p</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11309">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11307" target="_blank" rel="noopener noreferrer">#11307</a></td><td>Imaging browser API access check</td><td>GHSA-m48r-jv24-jjcx</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11307">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11300" target="_blank" rel="noopener noreferrer">#11300</a></td><td>issue_tracker access check</td><td>GHSA-c9q6-5f24-p7mj</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11300">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11299" target="_blank" rel="noopener noreferrer">#11299</a></td><td>File download path traversal</td><td>GHSA-47jj-7xfg-8759</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11299">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11296" target="_blank" rel="noopener noreferrer">#11296</a></td><td>Media access checks</td><td>GHSA-p42c-4gmq-hrjw</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11296">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11295" target="_blank" rel="noopener noreferrer">#11295</a></td><td>MRI feedback SQL injection</td><td>GHSA-9r29-6jgc-3ggh</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11295">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11292" target="_blank" rel="noopener noreferrer">#11292</a></td><td>document_repository access check</td><td>GHSA-qp6x-qfx7-54wp</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11292">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11290" target="_blank" rel="noopener noreferrer">#11290</a></td><td>Publication email</td><td>GHSA-6prw-34x8-3gpg</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11290">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11289" target="_blank" rel="noopener noreferrer">#11289</a></td><td>help_editor</td><td>GHSA-rch2-f5fw-cg95</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11289">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11276" target="_blank" rel="noopener noreferrer">#11276</a></td><td>survey_accounts</td><td>GHSA-776p-5pwh-vc8p</td><td>26.0</td><td><span class="pill merged" data-pr="aces/Loris#11276">Merged</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11343" target="_blank" rel="noopener noreferrer">#11343</a>, <a href="https://github.com/aces/Loris/pull/11344" target="_blank" rel="noopener noreferrer">#11344</a></td><td>candidate_parameters</td><td>GHSA-vfwx-wj8q-fp58</td><td>26.0, 27.0</td><td><span class="pill open">Open</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11339" target="_blank" rel="noopener noreferrer">#11339</a>, <a href="https://github.com/aces/Loris/pull/11340" target="_blank" rel="noopener noreferrer">#11340</a></td><td>document_repository</td><td>GHSA-7q8g-g764-4286</td><td>26.0, 27.0</td><td><span class="pill open">Open</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11335" target="_blank" rel="noopener noreferrer">#11335</a>, <a href="https://github.com/aces/Loris/pull/11336" target="_blank" rel="noopener noreferrer">#11336</a></td><td>data_release</td><td>GHSA-gc8r-37wr-jch6</td><td>26.0, 27.0</td><td><span class="pill open">Open</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11333" target="_blank" rel="noopener noreferrer">#11333</a>, <a href="https://github.com/aces/Loris/pull/11334" target="_blank" rel="noopener noreferrer">#11334</a></td><td>bvl_feedback</td><td>GHSA-q57f-8r6c-rj4c</td><td>26.0, 27.0</td><td><span class="pill open">Open</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11331" target="_blank" rel="noopener noreferrer">#11331</a>, <a href="https://github.com/aces/Loris/pull/11332" target="_blank" rel="noopener noreferrer">#11332</a></td><td>my_preferences</td><td>GHSA-wx4f-w3wh-2hwg</td><td>26.0, 27.0</td><td><span class="pill open">Open</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11325" target="_blank" rel="noopener noreferrer">#11325</a>, <a href="https://github.com/aces/Loris/pull/11326" target="_blank" rel="noopener noreferrer">#11326</a></td><td>API candidate ID authorization</td><td>GHSA-mhmh-hq54-22h6</td><td>26.0, 27.0</td><td><span class="pill open">Open</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11322" target="_blank" rel="noopener noreferrer">#11322</a>, <a href="https://github.com/aces/Loris/pull/11323" target="_blank" rel="noopener noreferrer">#11323</a></td><td>Database SQL injection</td><td>GHSA-vwrg-x293-r7g3</td><td>26.0, 27.0</td><td><span class="pill open">Open</span></td></tr>
+                  <tr><td><a href="https://github.com/aces/Loris/pull/11321" target="_blank" rel="noopener noreferrer">#11321</a></td><td>Static file router path traversal</td><td>GHSA-rjf5-58hw-wc5f</td><td>26.0</td><td><span class="pill open" data-pr="aces/Loris#11321">Open</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- LORIS -->
+    <section class="section alt" id="loris">
+      <div class="wrap">
+        <div class="section-head reveal"><div><h2>LORIS &amp; CBIG</h2><p>LORIS is an open-source web platform for longitudinal, multi-site neuroscience and clinical studies (PHP, React, MySQL). CBIG is its biobank extension for the Canadian Brain Imaging Group.</p></div><a class="more" href="https://github.com/aces/Loris" target="_blank" rel="noopener noreferrer">aces/Loris →</a></div>
+
+        <div class="stats s3 reveal">
+          <div class="stat"><b><span class="grad">36</span></b><span>Merged PRs: 18 in LORIS core, 18 in the CBIG fork</span></div>
+          <div class="stat"><b><span class="grad">20+</span></b><span>Defects filed in LORIS 29.0 release QA across 15+ modules</span></div>
+          <div class="stat"><b><span class="grad">140+</span></b><span>Review comments and discussion posts in LORIS and CBIG</span></div>
+        </div>
+
+        <h3 class="mt-4 reveal">Features and bug fixes in LORIS core</h3>
+        <div class="table-wrap mt-2 reveal">
+          <table>
+            <thead><tr><th>PR</th><th>Change</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><a href="https://github.com/aces/Loris/pull/11257" target="_blank" rel="noopener noreferrer">#11257</a></td><td><strong>[login]</strong> Account request spam filter and silent-rejection backend<span class="sub">Silently rejects repeated requests from disposable email domains (addresses #11130)</span></td><td><span class="pill open" data-pr="aces/Loris#11257">Open</span></td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/pull/11256" target="_blank" rel="noopener noreferrer">#11256</a></td><td><strong>[login]</strong> Dedicated <code>account_requests</code> staging table schema</td><td><span class="pill open" data-pr="aces/Loris#11256">Open</span></td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/pull/11230" target="_blank" rel="noopener noreferrer">#11230</a></td><td><strong>[login]</strong> Fix undefined <code>HTTP_X_FORWARDED_FOR</code> in the password reset workflow (issue #11201)</td><td><span class="pill open" data-pr="aces/Loris#11230">Open</span></td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/pull/11027" target="_blank" rel="noopener noreferrer">#11027</a></td><td><strong>[document_repository]</strong> Fix special characters in category names displayed as HTML-encoded text</td><td><span class="pill merged" data-pr="aces/Loris#11027">Merged</span></td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/pull/10974" target="_blank" rel="noopener noreferrer">#10974</a></td><td><strong>[new_profile]</strong> Default unique Site and Project options on "Recruit another candidate" reload</td><td><span class="pill merged" data-pr="aces/Loris#10974">Merged</span></td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/pull/10743" target="_blank" rel="noopener noreferrer">#10743</a></td><td><strong>[imaging_uploader]</strong> Handle non-JSON server responses (413 HTML pages) on upload (fixes #10662)</td><td><span class="pill merged" data-pr="aces/Loris#10743">Merged</span></td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/pull/10700" target="_blank" rel="noopener noreferrer">#10700</a></td><td><strong>[media]</strong> Fix browser freeze and JS stack traces on oversized uploads (closes #10659)</td><td><span class="pill merged" data-pr="aces/Loris#10700">Merged</span></td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/pull/10688" target="_blank" rel="noopener noreferrer">#10688</a></td><td><strong>[candidate_parameters]</strong> Fix date-of-birth page for EDC-only participants (<code>DateTime</code> TypeError, fixes #10644)</td><td><span class="pill merged" data-pr="aces/Loris#10688">Merged</span></td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/pull/10475" target="_blank" rel="noopener noreferrer">#10475</a></td><td><strong>[user_accounts]</strong> SweetAlert2 confirmation for Reject User</td><td><span class="pill merged" data-pr="aces/Loris#10475">Merged</span></td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/pull/10480" target="_blank" rel="noopener noreferrer">#10480</a></td><td><strong>[docs | wiki]</strong> Fix XIN Rules code-block rendering</td><td><span class="pill open" data-pr="aces/Loris#10480">Open</span></td></tr>
+              <tr><td><a href="https://github.com/HenriRabalais/Loris/pull/36" target="_blank" rel="noopener noreferrer">#36</a></td><td><strong>[htdocs]</strong> French study-title support for the Biobank Open portal (HenriRabalais/Loris)</td><td><span class="pill open" data-pr="HenriRabalais/Loris#36">Open</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card mt-3 reveal">
+          <span class="tag"><i class="bi bi-lock"></i> CBIG fork (private repository)</span>
+          <h3>18 merged pull requests in the CBIG biobank extension</h3>
+          <p>The repository is private, so the work is summarised here instead of linked.</p>
+          <ul class="bullets">
+            <li><strong>Security fixes:</strong> XSS in the survey_accounts AJAX endpoint, imaging browser API access check, timepoint_list authorization bypass. Two more are open: candidate ID authorization and cross-site participant record modification.</li>
+            <li><strong>Data engineering:</strong> idempotent SQL patches to create and initialize research projects and cohorts and to associate existing biospecimen visits, and a reassignment of candidates between projects that preserves their identifier prefixes.</li>
+            <li><strong>Tooling:</strong> modernization of the candidate data deletion script, which follows foreign-key dependencies across the schema (open, the project's largest design discussion with 140+ comments), a UTF-8 BOM fix in the CSV parser, and an output-path fix in <code>drop_all_tables.php</code>.</li>
+            <li><strong>Clinical instruments and UI:</strong> MRI capture sequence labels for Siemens and Philips forms, neurological evaluation options, diagnosis dropdown fixes, dashboard pending-accounts widget, user-account and permission-page fixes, and login-page partner logos for 42 institutions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CISCO & MERAKI -->
+    <section class="section" id="cisco">
+      <div class="wrap">
+        <div class="section-head reveal"><div><h2>Cisco &amp; Meraki network tooling</h2><p>Seven pull requests to Cisco-owned and Meraki repositories: four merged, two approved and awaiting final review.</p></div></div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead><tr><th>Repository</th><th>Change</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td class="repo">CiscoTestAutomation/genielibs</td><td><a href="https://github.com/CiscoTestAutomation/genielibs/pull/208" target="_blank" rel="noopener noreferrer">#208</a> Update the <code>pyasn1</code> pin from 0.6.0 to 0.6.4 to fix denial of service vulnerabilities (CVE-2026-23490, CVE-2026-30922, CVE-2026-59885)</td><td><span class="pill merged" data-pr="CiscoTestAutomation/genielibs#208">Merged</span></td></tr>
+              <tr><td class="repo">CiscoTestAutomation/genielibs</td><td><a href="https://github.com/CiscoTestAutomation/genielibs/pull/210" target="_blank" rel="noopener noreferrer">#210</a> Fix igmp vrf KeyError<span class="sub">Approved, awaiting a second review</span></td><td><span class="pill open" data-pr="CiscoTestAutomation/genielibs#210">Open</span></td></tr>
+              <tr><td class="repo">CiscoTestAutomation/genielibs</td><td><a href="https://github.com/CiscoTestAutomation/genielibs/pull/212" target="_blank" rel="noopener noreferrer">#212</a> Remove stale mapper references and restore the missing Mock import in test setUp (issue #211)</td><td><span class="pill open" data-pr="CiscoTestAutomation/genielibs#212">Open</span></td></tr>
+              <tr><td class="repo">meraki/dashboard-api-python</td><td><a href="https://github.com/meraki/dashboard-api-python/pull/485" target="_blank" rel="noopener noreferrer">#485</a> Register the nac, secureConnect, support, users and assistant API categories</td><td><span class="pill merged" data-pr="meraki/dashboard-api-python#485">Merged</span></td></tr>
+              <tr><td class="repo">meraki/dashboard-api-python</td><td><a href="https://github.com/meraki/dashboard-api-python/pull/498" target="_blank" rel="noopener noreferrer">#498</a> Test that all 22 API categories are initialized (issue #497)</td><td><span class="pill merged" data-pr="meraki/dashboard-api-python#498">Merged</span></td></tr>
+              <tr><td class="repo">cisco-ai-defense/ai-defense-python-sdk</td><td><a href="https://github.com/cisco-ai-defense/ai-defense-python-sdk/pull/116" target="_blank" rel="noopener noreferrer">#116</a> Fix broken link to the agentsec examples README (fixes #85)</td><td><span class="pill merged" data-pr="cisco-ai-defense/ai-defense-python-sdk#116">Merged</span></td></tr>
+              <tr><td class="repo">cisco-open/k8s-objectmatcher</td><td><a href="https://github.com/cisco-open/k8s-objectmatcher/pull/110" target="_blank" rel="noopener noreferrer">#110</a> Ignore volumeClaimTemplate metadata in diff calculation, which caused spurious StatefulSet diffs (fixes #51, Go)<span class="sub">Approved, not yet merged</span></td><td><span class="pill open" data-pr="cisco-open/k8s-objectmatcher#110">Open</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Also review comments on a fourth genielibs pull request.</p>
+      </div>
+    </section>
+
+    <!-- HARMONICA -->
+    <section class="section alt" id="harmonica">
+      <div class="wrap">
+        <div class="section-head reveal"><div><h2>HarmoniCA</h2><p>A Python and Streamlit tool that maps questionnaire items from several instruments to symptom dimensions. Four merged pull requests.</p></div><a class="more" href="https://github.com/julia-pfarr/HarmoniCA" target="_blank" rel="noopener noreferrer">Repository →</a></div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead><tr><th>PR</th><th>Change</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><a href="https://github.com/julia-pfarr/HarmoniCA/pull/25" target="_blank" rel="noopener noreferrer">#25</a></td><td><strong>Data Harmonizer tab</strong> with shared inventory check and harmonization. Users enter items or upload a CSV, and each item is checked against the inventory: exact matches reuse the existing assignment, possible duplicates get a review checkbox, and new items go to the model. New <code>uploader</code> package with validation rules and unit tests.<span class="sub">+1,067 −57 in 9 files · closes #24</span></td><td><span class="pill merged" data-pr="julia-pfarr/HarmoniCA#25">Merged</span></td></tr>
+              <tr><td><a href="https://github.com/julia-pfarr/HarmoniCA/pull/32" target="_blank" rel="noopener noreferrer">#32</a></td><td>Apply the Data Harmonizer rules to the Streamlit workspace: six required upload columns, a shared duplicate review, and results that carry answer options and scoring.<span class="sub">4 new tests · closes #31</span></td><td><span class="pill merged" data-pr="julia-pfarr/HarmoniCA#32">Merged</span></td></tr>
+              <tr><td><a href="https://github.com/julia-pfarr/HarmoniCA/pull/28" target="_blank" rel="noopener noreferrer">#28</a></td><td>Sync the <code>ux</code> branch with main (integration)</td><td><span class="pill merged" data-pr="julia-pfarr/HarmoniCA#28">Merged</span></td></tr>
+              <tr><td><a href="https://github.com/julia-pfarr/HarmoniCA/pull/29" target="_blank" rel="noopener noreferrer">#29</a></td><td>Release <code>ux</code> to main (integration)</td><td><span class="pill merged" data-pr="julia-pfarr/HarmoniCA#29">Merged</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- QA -->
+    <section class="section" id="qa">
+      <div class="wrap">
+        <div class="section-head reveal"><div><h2>Issues &amp; release QA</h2><p>32 issues filed, most from module-by-module release testing of LORIS 29.0. Each one is a reproducible, labelled report.</p></div></div>
+        <div class="grid g3">
+          <div class="card reveal"><div class="icon-tile"><i class="bi bi-clipboard-check"></i></div><h3>Release QA at scale</h3><p>Systematic testing of LORIS 29.0 across 15+ modules producing 20+ defect reports.</p></div>
+          <div class="card reveal"><div class="icon-tile"><i class="bi bi-shield-exclamation"></i></div><h3>Security findings</h3><p>Two credited advisories, plus sessions that stay active after an admin password reset and unhandled 500s on missing parameters.</p></div>
+          <div class="card reveal"><div class="icon-tile"><i class="bi bi-translate"></i></div><h3>Internationalization</h3><p>French and English inconsistency audit across 7+ modules, the largest issue cluster.</p></div>
+          <div class="card reveal"><div class="icon-tile"><i class="bi bi-exclamation-octagon"></i></div><h3>Error-handling hardening</h3><p>Non-JSON error responses, <code>DateTime</code> TypeErrors, HTTP 500 on missing parameters, HTML-entity encoding leaks.</p></div>
+          <div class="card reveal"><div class="icon-tile"><i class="bi bi-database-gear"></i></div><h3>Data engineering</h3><p>Idempotent project and cohort initialization patches, candidate reassignment, foreign-key-aware deletion tooling.</p></div>
+          <div class="card reveal"><div class="icon-tile"><i class="bi bi-envelope-slash"></i></div><h3>Abuse prevention</h3><p>Account-request spam filter: four design issues, a staging table, a filter backend and a related reset-workflow fix.</p></div>
+        </div>
+
+        <details class="more-box reveal">
+          <summary>LORIS 29.0 release-testing findings <span>16 issues · Jul – Aug 2026</span></summary>
+          <div class="box-body"><div class="table-wrap"><table>
+            <thead><tr><th>Issue</th><th>Module</th><th>Finding</th></tr></thead>
+            <tbody>
+              <tr><td><a href="https://github.com/aces/Loris/issues/11114" target="_blank" rel="noopener noreferrer">#11114</a></td><td>login</td><td>Validation rules for first and last name in the Request Account form</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/11112" target="_blank" rel="noopener noreferrer">#11112</a></td><td>login</td><td>Header and UI links on the landing page ignore the <code>?lang=</code> parameter</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/11095" target="_blank" rel="noopener noreferrer">#11095</a></td><td>conflict_resolver</td><td>Language inconsistencies on the Unsolved and Resolved tabs</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/11094" target="_blank" rel="noopener noreferrer">#11094</a></td><td>conflict_resolver</td><td>Allow admins to edit resolved conflicts, and clarify the test plan</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/11021" target="_blank" rel="noopener noreferrer">#11021</a></td><td>imaging_browser</td><td>Translation inconsistencies on the main page and candidate sub-pages</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/11020" target="_blank" rel="noopener noreferrer">#11020</a></td><td>publications</td><td>Translation inconsistencies in publication statuses</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/11019" target="_blank" rel="noopener noreferrer">#11019</a></td><td>candidate_profile</td><td>Language inconsistencies in Access Profile and New Access Profile</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10998" target="_blank" rel="noopener noreferrer">#10998</a></td><td>instrument_list</td><td>Instrument list fails to load for a visit with a generic error</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10934" target="_blank" rel="noopener noreferrer">#10934</a></td><td>instrument_list</td><td>Translation inconsistencies (high priority)</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10932" target="_blank" rel="noopener noreferrer">#10932</a></td><td>instrument_list</td><td>Left panel tooltip trimmed when hovering "Complete"</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10931" target="_blank" rel="noopener noreferrer">#10931</a></td><td>instrument_list</td><td>Unhandled HTTP 500 when required query parameters are missing</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10924" target="_blank" rel="noopener noreferrer">#10924</a></td><td>genomic_browser</td><td>Translation inconsistencies</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10923" target="_blank" rel="noopener noreferrer">#10923</a></td><td>genomic_browser</td><td>CPG name hyperlink missing in the Methylation tab</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10922" target="_blank" rel="noopener noreferrer">#10922</a></td><td>genomic_browser</td><td>SNP tab rsID hyperlink missing (no dbSNP navigation)</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10921" target="_blank" rel="noopener noreferrer">#10921</a></td><td>genomic_browser</td><td>Profile tab "File" link returns 404 instead of the filtered Files tab</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10920" target="_blank" rel="noopener noreferrer">#10920</a></td><td>genomic_browser</td><td>"Use PSCID in column headers" checkbox ignored by the backend</td></tr>
+            </tbody>
+          </table></div></div>
+        </details>
+
+        <details class="more-box reveal">
+          <summary>User accounts, dashboard and login issues <span>10 issues · 2026</span></summary>
+          <div class="box-body"><div class="table-wrap"><table>
+            <thead><tr><th>Issue</th><th>Module</th><th>Finding</th></tr></thead>
+            <tbody>
+              <tr><td><a href="https://github.com/aces/Loris/issues/11248" target="_blank" rel="noopener noreferrer">#11248</a> – <a href="https://github.com/aces/Loris/issues/11245" target="_blank" rel="noopener noreferrer">#11245</a></td><td>login</td><td>Spam-filter design set: staging table for unvetted accounts, admin block buttons for emails and domains, stopping the resubmission loop after rejection, seeding the filter with disposable email domains</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/11201" target="_blank" rel="noopener noreferrer">#11201</a></td><td>login</td><td>PHP notice for <code>HTTP_X_FORWARDED_FOR</code> in the reset workflow</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10652" target="_blank" rel="noopener noreferrer">#10652</a></td><td>dashboard</td><td>Show the last-login timestamp in the user's local timezone</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10651" target="_blank" rel="noopener noreferrer">#10651</a></td><td>user_accounts</td><td>Review validation rules for first and last name fields</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10650" target="_blank" rel="noopener noreferrer">#10650</a></td><td>user_accounts</td><td>Existing sessions stay active after an admin-generated password reset</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10649" target="_blank" rel="noopener noreferrer">#10649</a></td><td>user_accounts</td><td>Search results vary when trailing whitespace is present</td></tr>
+              <tr><td><a href="https://github.com/aces/Loris/issues/10474" target="_blank" rel="noopener noreferrer">#10474</a></td><td>user_accounts</td><td>Add a confirmation dialog to the Reject User action (high priority, fixed by #10475)</td></tr>
+            </tbody>
+          </table></div></div>
+        </details>
+
+        <details class="more-box reveal">
+          <summary>Issues in other projects <span>5 issues</span></summary>
+          <div class="box-body"><div class="table-wrap"><table>
+            <thead><tr><th>Issue</th><th>Repository</th><th>Finding</th></tr></thead>
+            <tbody>
+              <tr><td><a href="https://github.com/meraki/dashboard-api-python/issues/497" target="_blank" rel="noopener noreferrer">#497</a></td><td class="repo">meraki/dashboard-api-python</td><td>Category initialization test covered only 10 of 22 registered categories</td></tr>
+              <tr><td><a href="https://github.com/CiscoTestAutomation/genielibs/issues/211" target="_blank" rel="noopener noreferrer">#211</a></td><td class="repo">CiscoTestAutomation/genielibs</td><td>Several test files fail in setUp because of leftover mapper code and a missing Mock import</td></tr>
+              <tr><td><a href="https://github.com/julia-pfarr/HarmoniCA/issues/24" target="_blank" rel="noopener noreferrer">#24</a>, <a href="https://github.com/julia-pfarr/HarmoniCA/issues/27" target="_blank" rel="noopener noreferrer">#27</a>, <a href="https://github.com/julia-pfarr/HarmoniCA/issues/31" target="_blank" rel="noopener noreferrer">#31</a></td><td class="repo">julia-pfarr/HarmoniCA</td><td>Data Harmonizer tab, ux sync, and harmonizer rules for Streamlit uploads</td></tr>
+            </tbody>
+          </table></div></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-head reveal"><div><h2>Reviews &amp; discussions</h2><p>Code review and design discussion on other contributors' work.</p></div></div>
+        <div class="card reveal">
+          <ul class="bullets" style="margin-top:0">
+            <li><strong>LORIS:</strong> instrument header localization (<a href="https://github.com/aces/Loris/pull/11000" target="_blank" rel="noopener noreferrer">#11000</a>), instrument_list tooltip fix (<a href="https://github.com/aces/Loris/pull/10970" target="_blank" rel="noopener noreferrer">#10970</a>), French "EDC Age" mistranslation (<a href="https://github.com/aces/Loris/issues/10778" target="_blank" rel="noopener noreferrer">#10778</a>), oversized media upload (<a href="https://github.com/aces/Loris/issues/10659" target="_blank" rel="noopener noreferrer">#10659</a>), XIN rule docs rendering (<a href="https://github.com/aces/Loris/issues/10409" target="_blank" rel="noopener noreferrer">#10409</a>).</li>
+            <li><strong>CBIG (private):</strong> family relationship import script, deletion-script design and several UI and permissions threads.</li>
+            <li><strong>Cisco genielibs and Meraki:</strong> review comments and follow-up discussion on pull requests and issues.</li>
+            <li><strong>Earlier collaboration:</strong> 8 merged pull requests to a team Android health-monitoring app (McGill ECSE 682, 2023) and a merged pull request to a COMP 512 distributed systems team project (2022).</li>
+          </ul>
+        </div>
+      </div>
+    </section>

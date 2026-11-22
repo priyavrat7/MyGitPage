@@ -115,7 +115,7 @@
     <div class="wrap stats-band">
       <div class="stats reveal">
         <div class="stat"><b><span class="grad">2</span></b><span>Published security advisories credited to me (CWE-862, CWE-639)</span></div>
-        <div class="stat"><b><span class="grad">53</span></b><span>Merged pull requests across LORIS, Cisco, Meraki and HarmoniCA</span></div>
+        <div class="stat"><b><span class="grad" data-stat="merged">53</span></b><span>Merged pull requests across LORIS, Cisco, Meraki and HarmoniCA</span></div>
         <div class="stat"><b><span class="grad">99%</span></b><span>Faster UAV routing heuristic vs exact CPLEX ILP (IEEE ICC 2025)</span></div>
         <div class="stat"><b><span class="grad">700+</span></b><span>Students taught across programming, networking and ML</span></div>
       </div>
@@ -195,23 +195,23 @@
     <section class="section">
       <div class="wrap">
         <div class="section-head reveal">
-          <div><h2>Open-source highlights</h2><p>83 pull requests authored, 53 merged, 32 issues filed. A selection of the work I'm proudest of, each linked to the public record.</p></div>
+          <div><h2>Open-source highlights</h2><p><span data-stat="prs">83</span> pull requests authored, <span data-stat="merged">53</span> merged, <span data-stat="issues">32</span> issues filed. A selection of the work I'm proudest of, each linked to the public record.</p></div>
           <a class="more" href="opensource.html">Full contribution log →</a>
         </div>
         <div class="table-wrap reveal">
           <table>
             <thead><tr><th>Project</th><th>Contribution</th><th>Impact</th><th>Status</th></tr></thead>
             <tbody>
-              <tr><td class="repo">CiscoTestAutomation/genielibs</td><td><a href="https://github.com/CiscoTestAutomation/genielibs/pull/208" target="_blank" rel="noopener noreferrer">Update pyasn1 pin to 0.6.4</a><span class="sub">Cisco pyATS and Genie</span></td><td>Fixes three denial of service CVEs</td><td><span class="pill merged">Merged</span></td></tr>
-              <tr><td class="repo">meraki/dashboard-api-python</td><td><a href="https://github.com/meraki/dashboard-api-python/pull/485" target="_blank" rel="noopener noreferrer">Register 5 missing API categories</a><span class="sub">nac, secureConnect, support, users, assistant</span></td><td>Makes new Meraki endpoints usable in the official SDK</td><td><span class="pill merged">Merged</span></td></tr>
-              <tr><td class="repo">meraki/dashboard-api-python</td><td><a href="https://github.com/meraki/dashboard-api-python/pull/498" target="_blank" rel="noopener noreferrer">Test that all 22 API categories initialize</a></td><td>Test previously covered only 10 of 22</td><td><span class="pill merged">Merged</span></td></tr>
-              <tr><td class="repo">cisco-open/k8s-objectmatcher</td><td><a href="https://github.com/cisco-open/k8s-objectmatcher/pull/110" target="_blank" rel="noopener noreferrer">Fix volumeClaimTemplate diff bug (Go)</a></td><td>Removes spurious StatefulSet diffs</td><td><span class="pill open">Open</span></td></tr>
+              <tr><td class="repo">CiscoTestAutomation/genielibs</td><td><a href="https://github.com/CiscoTestAutomation/genielibs/pull/208" target="_blank" rel="noopener noreferrer">Update pyasn1 pin to 0.6.4</a><span class="sub">Cisco pyATS and Genie</span></td><td>Fixes three denial of service CVEs</td><td><span class="pill merged" data-pr="CiscoTestAutomation/genielibs#208">Merged</span></td></tr>
+              <tr><td class="repo">meraki/dashboard-api-python</td><td><a href="https://github.com/meraki/dashboard-api-python/pull/485" target="_blank" rel="noopener noreferrer">Register 5 missing API categories</a><span class="sub">nac, secureConnect, support, users, assistant</span></td><td>Makes new Meraki endpoints usable in the official SDK</td><td><span class="pill merged" data-pr="meraki/dashboard-api-python#485">Merged</span></td></tr>
+              <tr><td class="repo">meraki/dashboard-api-python</td><td><a href="https://github.com/meraki/dashboard-api-python/pull/498" target="_blank" rel="noopener noreferrer">Test that all 22 API categories initialize</a></td><td>Test previously covered only 10 of 22</td><td><span class="pill merged" data-pr="meraki/dashboard-api-python#498">Merged</span></td></tr>
+              <tr><td class="repo">cisco-open/k8s-objectmatcher</td><td><a href="https://github.com/cisco-open/k8s-objectmatcher/pull/110" target="_blank" rel="noopener noreferrer">Fix volumeClaimTemplate diff bug (Go)</a></td><td>Removes spurious StatefulSet diffs</td><td><span class="pill open" data-pr="cisco-open/k8s-objectmatcher#110">Open</span></td></tr>
               <tr><td class="repo">aces/Loris</td><td><a href="https://github.com/aces/Loris/security/advisories/GHSA-f488-7r46-r42v" target="_blank" rel="noopener noreferrer">Authorization bypass in user_accounts</a><span class="sub">Credited reporter · CWE-862 · CVSS 5.4</span></td><td>Fixed in LORIS 27.0.4 and 28.0.2</td><td><span class="pill pub">Advisory</span></td></tr>
               <tr><td class="repo">aces/Loris</td><td><a href="https://github.com/aces/Loris/security/advisories/GHSA-3vv3-x7q8-46vr" target="_blank" rel="noopener noreferrer">IDOR in timepoint_list</a><span class="sub">Credited reporter · CWE-639 · CVSS 4.3</span></td><td>Stopped candidate record enumeration</td><td><span class="pill pub">Advisory</span></td></tr>
-              <tr><td class="repo">aces/Loris</td><td><a href="https://github.com/aces/Loris/pull/11299" target="_blank" rel="noopener noreferrer">Backport file-download path traversal fix</a><span class="sub">Plus 11 more security backports to 26.0</span></td><td>Protects older supported releases</td><td><span class="pill merged">Merged</span></td></tr>
-              <tr><td class="repo">aces/Loris</td><td><a href="https://github.com/aces/Loris/pull/10700" target="_blank" rel="noopener noreferrer">Fix browser freeze on oversized media upload</a></td><td>Graceful errors instead of stack traces</td><td><span class="pill merged">Merged</span></td></tr>
-              <tr><td class="repo">aces/Loris</td><td><a href="https://github.com/aces/Loris/pull/11257" target="_blank" rel="noopener noreferrer">Account-request spam filter</a><span class="sub">Staging table plus silent-rejection backend</span></td><td>Stops abusive repeat sign-ups</td><td><span class="pill open">Open</span></td></tr>
-              <tr><td class="repo">julia-pfarr/HarmoniCA</td><td><a href="https://github.com/julia-pfarr/HarmoniCA/pull/25" target="_blank" rel="noopener noreferrer">Data Harmonizer tab</a><span class="sub">+1,067 lines, with tests</span></td><td>CSV upload, inventory check, duplicate review</td><td><span class="pill merged">Merged</span></td></tr>
+              <tr><td class="repo">aces/Loris</td><td><a href="https://github.com/aces/Loris/pull/11299" target="_blank" rel="noopener noreferrer">Backport file-download path traversal fix</a><span class="sub">Plus 11 more security backports to 26.0</span></td><td>Protects older supported releases</td><td><span class="pill merged" data-pr="aces/Loris#11299">Merged</span></td></tr>
+              <tr><td class="repo">aces/Loris</td><td><a href="https://github.com/aces/Loris/pull/10700" target="_blank" rel="noopener noreferrer">Fix browser freeze on oversized media upload</a></td><td>Graceful errors instead of stack traces</td><td><span class="pill merged" data-pr="aces/Loris#10700">Merged</span></td></tr>
+              <tr><td class="repo">aces/Loris</td><td><a href="https://github.com/aces/Loris/pull/11257" target="_blank" rel="noopener noreferrer">Account-request spam filter</a><span class="sub">Staging table plus silent-rejection backend</span></td><td>Stops abusive repeat sign-ups</td><td><span class="pill open" data-pr="aces/Loris#11257">Open</span></td></tr>
+              <tr><td class="repo">julia-pfarr/HarmoniCA</td><td><a href="https://github.com/julia-pfarr/HarmoniCA/pull/25" target="_blank" rel="noopener noreferrer">Data Harmonizer tab</a><span class="sub">+1,067 lines, with tests</span></td><td>CSV upload, inventory check, duplicate review</td><td><span class="pill merged" data-pr="julia-pfarr/HarmoniCA#25">Merged</span></td></tr>
             </tbody>
           </table>
         </div>
