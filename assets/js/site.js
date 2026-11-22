@@ -16,7 +16,8 @@
     if (!toggle) return;
     var light = root.getAttribute('data-theme') === 'light';
     toggle.innerHTML = light ? '<i class="bi bi-moon-stars"></i>' : '<i class="bi bi-sun"></i>';
-    toggle.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+    var fr = root.lang === 'fr';
+    toggle.setAttribute('aria-label', light ? (fr ? 'Passer au thème sombre' : 'Switch to dark theme') : (fr ? 'Passer au thème clair' : 'Switch to light theme'));
   }
   if (toggle) {
     paintIcon();

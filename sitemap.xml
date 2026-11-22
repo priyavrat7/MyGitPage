@@ -1,10 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://priyavrat7.github.io/MyGitPage/</loc><lastmod>2026-11-22</lastmod><priority>1.0</priority></url>
-  <url><loc>https://priyavrat7.github.io/MyGitPage/about.html</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://priyavrat7.github.io/MyGitPage/resume.html</loc><lastmod>2026-11-22</lastmod><priority>0.9</priority></url>
-  <url><loc>https://priyavrat7.github.io/MyGitPage/opensource.html</loc><lastmod>2026-11-22</lastmod><priority>0.9</priority></url>
-  <url><loc>https://priyavrat7.github.io/MyGitPage/projects.html</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://priyavrat7.github.io/MyGitPage/academics.html</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://priyavrat7.github.io/MyGitPage/contact.html</loc><lastmod>2026-11-22</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://priyavrat7.github.io/MyGitPage/</loc><lastmod>2026-11-22</lastmod><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/fr/</loc><lastmod>2026-11-22</lastmod><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/about.html</loc><lastmod>2026-11-22</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/about.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/fr/about.html</loc><lastmod>2026-11-22</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/about.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/resume.html</loc><lastmod>2026-11-22</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/resume.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/resume.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/fr/resume.html</loc><lastmod>2026-11-22</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/resume.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/resume.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/opensource.html</loc><lastmod>2026-11-22</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/opensource.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/opensource.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/fr/opensource.html</loc><lastmod>2026-11-22</lastmod><priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/opensource.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/opensource.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/projects.html</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/projects.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/fr/projects.html</loc><lastmod>2026-11-22</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/projects.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/academics.html</loc><lastmod>2026-11-22</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/academics.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/academics.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/fr/academics.html</loc><lastmod>2026-11-22</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/academics.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/academics.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/contact.html</loc><lastmod>2026-11-22</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/contact.html"/>
+  </url>
+  <url><loc>https://priyavrat7.github.io/MyGitPage/fr/contact.html</loc><lastmod>2026-11-22</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://priyavrat7.github.io/MyGitPage/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://priyavrat7.github.io/MyGitPage/fr/contact.html"/>
+  </url>
 </urlset>

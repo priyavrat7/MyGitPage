@@ -483,3 +483,6 @@ details.more-box .table-wrap { border-radius: var(--radius-sm); }
 .logo-media { background: #fff; display: grid; place-items: center; }
 .logo-media img { width: 78%; height: auto; max-height: 86%; object-fit: contain; }
 .card:hover .logo-media img { transform: none; }
+
+/* language switch */
+.lang-btn { width: auto; min-width: 38px; padding: 0 10px; font-size: .78rem; font-weight: 700; letter-spacing: .06em; }
