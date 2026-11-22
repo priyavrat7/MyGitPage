@@ -479,3 +479,7 @@ details.more-box .table-wrap { border-radius: var(--radius-sm); }
   a { color: #000; text-decoration: none; }
   .grad { color: #000; background: none; }
 }
+
+.logo-media { background: #fff; display: grid; place-items: center; }
+.logo-media img { width: 78%; height: auto; max-height: 86%; object-fit: contain; }
+.card:hover .logo-media img { transform: none; }
