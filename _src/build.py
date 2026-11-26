@@ -37,7 +37,7 @@ def page(name, raw, lang):
     hdr = hdr.replace(f'<a href="{name}">', f'<a href="{name}" aria-current="page">')
     url = BASE + ("fr/" if fr else "") + (name if name != "index.html" else "")
     en_url = BASE + (name if name != "index.html" else ""); fr_url = BASE + "fr/" + (name if name != "index.html" else "")
-    img = BASE + "assets/img/" + meta.get("image", "priv6.jpg")
+    img = BASE + f"assets/img/og-card-{lang}.jpg?v=1"          # link-preview card; bump v after redrawing
     pre = "../" if fr else ""
     jl = ""
     if name == "index.html":
@@ -63,7 +63,12 @@ def page(name, raw, lang):
   <meta property="og:url" content="{url}">
   <meta property="og:title" content="{ti}">
   <meta property="og:description" content="{d}">
+  <meta property="og:site_name" content="Priyavrat Dev Sharma">
   <meta property="og:image" content="{img}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Priyavrat Dev Sharma, {'Développeur de logiciels de recherche' if fr else 'Research Software Developer'}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{ti}">
   <meta name="twitter:description" content="{d}">

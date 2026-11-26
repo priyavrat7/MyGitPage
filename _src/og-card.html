@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;800&display=swap" rel="stylesheet">
+<style>
+  /* Link-preview card, 1200x630. Everything important sits in the middle 600px,
+     so it still reads when an app crops the image to a square.
+     Open with ?fr for the French version. */
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1200px;height:630px;overflow:hidden;font-family:Inter,system-ui,sans-serif;color:#eef2fb;text-align:center;
+    background:radial-gradient(700px 420px at 50% 0%,rgba(56,189,248,.22),transparent 70%),radial-gradient(800px 400px at 50% 110%,rgba(129,140,248,.24),transparent 70%),#0a0f1c;
+    display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .photo{width:270px;height:270px;border-radius:50%;padding:6px;background:linear-gradient(135deg,#38bdf8,#818cf8)}
+  .photo div{width:100%;height:100%;border-radius:50%;overflow:hidden;background:#1b2743}
+  .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;transform:scale(1.12);transform-origin:50% 30%}
+  h1{font-size:56px;font-weight:800;letter-spacing:-1.5px;margin-top:28px;white-space:nowrap}
+  h2{font-size:30px;font-weight:600;margin-top:10px;background:linear-gradient(135deg,#38bdf8,#818cf8);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+  p{font-size:23px;font-weight:500;color:#a9b6d3;margin-top:16px;white-space:nowrap}
+</style></head><body>
+  <div class="photo"><div><img src="../assets/img/priv7-cutout.png" alt=""></div></div>
+  <h1>Priyavrat Dev Sharma</h1>
+  <h2 id="role">Research Software Developer</h2>
+  <p id="tags">Security · Networking · Open Source</p>
+<script>
+if (location.search === '?fr') {
+  document.getElementById('role').textContent = 'Développeur de logiciels de recherche';
+  document.getElementById('tags').textContent = 'Sécurité · Réseautique · Open source';
+}
+</script></body></html>
