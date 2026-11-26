@@ -175,8 +175,8 @@ ul { list-style: none; }
 }
 .photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; }
 .hero-badge {
-  position: absolute; left: -26px; bottom: 26px; z-index: 2;
-  display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+  position: relative; width: 320px; margin: 14px auto 0; text-align: left;
+  display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 14px;
   background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
   font-size: .82rem; font-weight: 600;
 }
@@ -440,7 +440,7 @@ details.more-box .table-wrap { border-radius: var(--radius-sm); }
   .hero .wrap { grid-template-columns: 1fr; gap: 36px; }
   .hero-photo { order: -1; }
   .photo-frame { width: 250px; height: 267px; }
-  .hero-badge { left: auto; right: -30px; bottom: 14px; }
+  .hero-badge { width: 250px; }
   .g3, .g4, .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .split, .split.profile-split { grid-template-columns: 1fr; }
   .stats.s5 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
